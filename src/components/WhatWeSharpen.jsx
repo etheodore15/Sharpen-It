@@ -11,25 +11,26 @@ const items = [
 
 export default function WhatWeSharpen() {
   return (
-    <section id="what-we-sharpen" className="bg-[#f5f5f0] py-24 px-4">
-      <div className="max-w-5xl mx-auto">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
+    <section id="what-we-sharpen" className="bg-[#f5f5f0]">
+      {/* Hero image banner */}
+      <div className="relative w-full h-56 sm:h-72 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80"
+          alt="Collection of professional kitchen knives"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[#0f0f0f]/50" />
+        <div className="absolute inset-0 flex items-end pb-8 px-6 sm:px-12 max-w-5xl mx-auto left-0 right-0">
           <div>
-            <p className="text-[#4a7fa5] font-bold text-xs uppercase tracking-widest mb-4">Services</p>
-            <h2 className="text-4xl sm:text-5xl font-black text-[#0f0f0f] leading-tight">
+            <p className="text-[#4a7fa5] font-bold text-xs uppercase tracking-widest mb-2">Services</p>
+            <h2 className="text-3xl sm:text-5xl font-black text-white leading-tight">
               What we sharpen.
             </h2>
           </div>
-          {/* Knife image accent */}
-          <div className="hidden lg:block w-64 h-32 overflow-hidden shrink-0">
-            <img
-              src="https://images.unsplash.com/photo-1614695975280-839e5e2b1e9c?auto=format&fit=crop&w=640&q=80"
-              alt="Assorted kitchen knives"
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
         </div>
+      </div>
 
+      <div className="max-w-5xl mx-auto px-4 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#0f0f0f]/10">
           {items.map((item, i) => (
             <div

@@ -31,8 +31,23 @@ export default function B2BSection() {
   };
 
   return (
-    <section id="b2b" className="bg-[#f5f5f0] py-24 px-4">
-      <div className="max-w-5xl mx-auto">
+    <section id="b2b" className="bg-[#f5f5f0]">
+      {/* Full-width commercial kitchen banner */}
+      <div className="relative w-full h-56 sm:h-72 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80"
+          alt="Professional commercial kitchen"
+          className="w-full h-full object-cover object-bottom"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-[#f5f5f0]" />
+        <div className="absolute bottom-6 left-6 sm:left-12">
+          <span className="inline-block bg-[#4a7fa5] text-white text-xs font-black px-4 py-2 uppercase tracking-widest">
+            Commercial Accounts
+          </span>
+        </div>
+      </div>
+
+      <div className="max-w-5xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left: copy */}
           <div>
@@ -68,14 +83,6 @@ export default function B2BSection() {
               <p className="text-white/30 text-xs mt-1">All other regions via prepaid Australia Post satchel.</p>
             </div>
 
-            {/* Commercial kitchen image */}
-            <div className="mt-6 overflow-hidden h-48">
-              <img
-                src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=800&q=80"
-                alt="Commercial kitchen"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
           </div>
 
           {/* Right: form */}

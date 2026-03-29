@@ -29,7 +29,17 @@ export default function Pricing() {
   const scrollToOrder = () => document.getElementById('order')?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section id="pricing" className="bg-[#0f0f0f] py-24 px-4">
+    <section id="pricing" className="bg-[#0f0f0f]">
+      {/* Photo divider */}
+      <div className="relative w-full h-48 sm:h-64 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1920&q=80"
+          alt="Professional kitchen knife set"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f5f5f0] via-black/60 to-[#0f0f0f]" />
+      </div>
+      <div className="py-24 px-4">
       <div className="max-w-5xl mx-auto">
         <div className="mb-16">
           <p className="text-[#4a7fa5] font-bold text-xs uppercase tracking-widest mb-4">Pricing</p>
@@ -92,6 +102,7 @@ export default function Pricing() {
           More than 8 knives? Just enter the quantity in the form. Each extra knife $15. Ceramic knives $25 each.
         </p>
       </div>
+    </div>
     </section>
   );
 }

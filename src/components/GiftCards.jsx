@@ -46,6 +46,14 @@ export default function GiftCards() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left: copy */}
           <div>
+            {/* Gift image */}
+            <div className="w-full h-48 overflow-hidden mb-8">
+              <img
+                src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80"
+                alt="Gift wrapping"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
             <p className="text-[#4a7fa5] font-semibold text-sm uppercase tracking-widest mb-3">Gift Cards</p>
             <h2 className="text-3xl sm:text-4xl font-black text-[#1a1a1a] mb-5 leading-tight">
               Give the Gift of Sharp Knives
