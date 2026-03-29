@@ -5,7 +5,7 @@ import Admin from './pages/Admin';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Sharpen-It">
       <AppProvider>
         <Routes>
           <Route path="/" element={<HomePage />} />
