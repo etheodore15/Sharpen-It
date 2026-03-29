@@ -7,6 +7,7 @@ const products = [
     price: 55,
     description: 'Blade oil, honing steel, and edge guards. Everything you need to maintain your edge between services.',
     badge: 'Best Seller',
+    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=400&q=80',
   },
   {
     id: 'Honing Steel',
@@ -14,6 +15,7 @@ const products = [
     price: 40,
     description: 'Professional ceramic honing rod. Realigns the edge between sharpenings — use it every time you cook.',
     badge: null,
+    image: 'https://images.unsplash.com/photo-1566454825481-d071090b3d64?auto=format&fit=crop&w=400&q=80',
   },
   {
     id: 'Blade Oil',
@@ -21,6 +23,7 @@ const products = [
     price: 20,
     description: 'Food-safe camellia oil, 50ml. Prevents rust on carbon steel. A few drops after washing is all it takes.',
     badge: null,
+    image: 'https://images.unsplash.com/photo-1603484477859-abe6a73f9366?auto=format&fit=crop&w=400&q=80',
   },
   {
     id: 'Edge Guards',
@@ -28,6 +31,7 @@ const products = [
     price: 18,
     description: 'Set of 4 universal blade guards. Protect your edge during storage and transport.',
     badge: null,
+    image: 'https://images.unsplash.com/photo-1615442999614-c53695a32a51?auto=format&fit=crop&w=400&q=80',
   },
 ];
 
@@ -62,6 +66,14 @@ export default function AddOns() {
                 {product.badge && (
                   <div className="absolute -top-px left-0 right-0 h-px bg-[#4a7fa5]" />
                 )}
+                {/* Product image */}
+                <div className="w-full h-36 overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
                 <div className="p-6 flex flex-col flex-1">
                   {product.badge && (
                     <span className="text-[#4a7fa5] text-xs font-bold uppercase tracking-widest mb-3">{product.badge}</span>
