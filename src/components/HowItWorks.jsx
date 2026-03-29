@@ -23,11 +23,21 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="bg-[#f5f5f0] py-24 px-4">
       <div className="max-w-5xl mx-auto">
-        <div className="mb-20">
+        <div className="mb-12">
           <p className="text-[#4a7fa5] font-bold text-xs uppercase tracking-widest mb-4">The Process</p>
           <h2 className="text-4xl sm:text-5xl font-black text-[#0f0f0f] leading-tight max-w-sm">
             Three steps.<br />That's it.
           </h2>
+        </div>
+
+        {/* Visual image */}
+        <div className="relative w-full h-48 sm:h-64 mb-16 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1591189863430-ab87e120f312?auto=format&fit=crop&w=1400&q=80"
+            alt="Professional knife sharpening"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#f5f5f0]/60 to-transparent" />
         </div>
 
         <div className="relative">

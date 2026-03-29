@@ -24,8 +24,15 @@ export default function Hero() {
 
   return (
     <section className="bg-[#0f0f0f] min-h-[92vh] flex items-center justify-center pt-24 pb-20 px-4 relative overflow-hidden">
-      {/* Subtle vignette */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_40%,_#000_100%)] pointer-events-none" />
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-XhEtAwVh6W4?auto=format&fit=crop&w=1920&q=80')" }}
+      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-[#0f0f0f]/80" />
+      {/* Vignette */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_30%,_#000_100%)] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Pre-launch badge */}

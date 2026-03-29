@@ -13,11 +13,21 @@ export default function WhatWeSharpen() {
   return (
     <section id="what-we-sharpen" className="bg-[#f5f5f0] py-24 px-4">
       <div className="max-w-5xl mx-auto">
-        <div className="mb-16">
-          <p className="text-[#4a7fa5] font-bold text-xs uppercase tracking-widest mb-4">Services</p>
-          <h2 className="text-4xl sm:text-5xl font-black text-[#0f0f0f] leading-tight">
-            What we sharpen.
-          </h2>
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
+          <div>
+            <p className="text-[#4a7fa5] font-bold text-xs uppercase tracking-widest mb-4">Services</p>
+            <h2 className="text-4xl sm:text-5xl font-black text-[#0f0f0f] leading-tight">
+              What we sharpen.
+            </h2>
+          </div>
+          {/* Knife image accent */}
+          <div className="hidden lg:block w-64 h-32 overflow-hidden shrink-0">
+            <img
+              src="https://images.unsplash.com/photo-1614695975280-839e5e2b1e9c?auto=format&fit=crop&w=640&q=80"
+              alt="Assorted kitchen knives"
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#0f0f0f]/10">

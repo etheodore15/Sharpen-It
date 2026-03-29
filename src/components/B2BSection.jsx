@@ -67,6 +67,15 @@ export default function B2BSection() {
               <p className="text-white text-sm font-semibold">Sydney · Newcastle · Lake Macquarie · Central Coast</p>
               <p className="text-white/30 text-xs mt-1">All other regions via prepaid Australia Post satchel.</p>
             </div>
+
+            {/* Commercial kitchen image */}
+            <div className="mt-6 overflow-hidden h-48">
+              <img
+                src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=800&q=80"
+                alt="Commercial kitchen"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
           </div>
 
           {/* Right: form */}
