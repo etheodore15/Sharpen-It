@@ -79,7 +79,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-600">
           <span>© 2026 SharpenIt · Australia-wide postal knife sharpening · ABN 19 245 621 227</span>
-          <a href="/admin" className="hover:text-gray-400 transition-colors">Admin</a>
+          <a href="#/admin" className="hover:text-gray-400 transition-colors">Admin</a>
         </div>
       </div>
     </footer>
