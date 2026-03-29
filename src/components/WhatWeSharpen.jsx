@@ -1,58 +1,48 @@
 const items = [
-  { icon: '🔪', label: "Chef's knives", desc: "French and German-style chef knives of all sizes" },
-  { icon: '🍽️', label: "Domestic kitchen knives", desc: "Bread knives, paring knives, utility knives" },
-  { icon: '🏕️', label: "Hunting & pocket knives", desc: "Fixed blades, folding knives, camp knives" },
-  { icon: '✂️', label: "Scissors & shears", desc: "Kitchen scissors, fabric shears, hair scissors" },
-  { icon: '🇯🇵', label: "Japanese knives", desc: "Santoku, nakiri, gyuto — single and double bevel" },
-  { icon: '🧀', label: "Specialist & ceramic knives", desc: "Ceramic blades require diamond wheel sharpening" },
-  { icon: '🌿', label: "Secateurs & garden tools", desc: "Pruning shears, loppers, garden scissors" },
-  { icon: '🪒', label: "Straight razors", desc: "Traditional straight razors honed to a shave-ready edge" },
+  { label: "Chef's Knives", desc: "French and German-style chef knives of all sizes" },
+  { label: "Domestic Kitchen", desc: "Bread knives, paring knives, utility knives" },
+  { label: "Hunting & Pocket", desc: "Fixed blades, folding knives, camp knives" },
+  { label: "Scissors & Shears", desc: "Kitchen scissors, fabric shears, hair scissors" },
+  { label: "Japanese Knives", desc: "Santoku, nakiri, gyuto — single and double bevel" },
+  { label: "Ceramic Knives", desc: "Diamond wheel sharpening — surcharge applies" },
+  { label: "Secateurs & Garden", desc: "Pruning shears, loppers, garden scissors" },
+  { label: "Straight Razors", desc: "Honed to a shave-ready edge" },
 ];
 
 export default function WhatWeSharpen() {
-  const scrollToOrder = () => {
-    document.getElementById('order')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <section id="what-we-sharpen" className="bg-[#f5f5f0] py-20 px-4">
+    <section id="what-we-sharpen" className="bg-[#f5f5f0] py-24 px-4">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-14">
-          <p className="text-[#4a7fa5] font-semibold text-sm uppercase tracking-widest mb-3">Our Services</p>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#1a1a1a] mb-4">What We Sharpen</h2>
-          <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            We handle everything from everyday kitchen knives to specialist blades. If it has an edge, we can sharpen it.
-          </p>
+        <div className="mb-16">
+          <p className="text-[#4a7fa5] font-bold text-xs uppercase tracking-widest mb-4">Services</p>
+          <h2 className="text-4xl sm:text-5xl font-black text-[#0f0f0f] leading-tight">
+            What we sharpen.
+          </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#0f0f0f]/10">
           {items.map((item, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col items-center text-center"
+              className="bg-[#f5f5f0] p-6 hover:bg-white transition-colors group"
             >
-              <span className="text-4xl mb-3">{item.icon}</span>
-              <h3 className="font-bold text-[#1a1a1a] text-sm mb-1.5 leading-snug">{item.label}</h3>
-              <p className="text-gray-400 text-xs leading-relaxed">{item.desc}</p>
+              <div className="w-6 h-px bg-[#4a7fa5] mb-4 group-hover:w-10 transition-all duration-300" />
+              <h3 className="font-black text-[#0f0f0f] text-sm uppercase tracking-wide mb-2 leading-snug">{item.label}</h3>
+              <p className="text-[#0f0f0f]/40 text-xs leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 bg-white rounded-xl border border-[#4a7fa5]/20 p-5 text-center">
-          <p className="text-sm text-gray-600">
-            <span className="font-semibold text-[#1a1a1a]">Not sure if we sharpen your blade?</span>{' '}
-            Email us at{' '}
-            <a href="mailto:hello@sharpenit.com.au" className="text-[#4a7fa5] font-semibold hover:underline">
+        <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-8 border-t border-[#0f0f0f]/10">
+          <p className="text-[#0f0f0f]/40 text-xs uppercase tracking-widest">
+            Not sure? Email us before you send anything.{' '}
+            <a href="mailto:hello@sharpenit.com.au" className="text-[#4a7fa5] hover:underline">
               hello@sharpenit.com.au
-            </a>{' '}
-            and we'll let you know before you send anything.
+            </a>
           </p>
-        </div>
-
-        <div className="text-center mt-8">
           <button
-            onClick={scrollToOrder}
-            className="bg-[#1a1a1a] hover:bg-[#333] text-white font-bold px-8 py-4 rounded-xl transition-colors text-base"
+            onClick={() => document.getElementById('order')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-[#0f0f0f] hover:bg-[#4a7fa5] text-white text-xs font-black px-8 py-4 uppercase tracking-widest transition-colors whitespace-nowrap"
           >
             Reserve Your Satchel →
           </button>

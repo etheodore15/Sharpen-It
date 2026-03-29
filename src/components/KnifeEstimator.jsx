@@ -39,27 +39,18 @@ function getResult(answers) {
   if (q1 === 'never' || (q1 === '2years' && q2 === 'struggle')) {
     return {
       type: 'Full Restoration',
-      description: 'Your knives need significant work to restore a proper cutting edge. Our Full Restoration service removes chips, reprofiling the bevel, and brings the blade back to factory sharpness.',
-      color: 'bg-red-50 border-red-200',
-      badge: 'bg-red-100 text-red-700',
-      icon: '🔥',
+      description: 'Your knives need significant work. We\'ll reprofile the bevel, remove chips, and restore a proper working edge from scratch.',
     };
   }
   if (q1 === 'never' || q1 === '2years') {
     return {
       type: 'Standard Sharpen',
-      description: 'Your knives need a thorough sharpening session. Our Standard Sharpen restores a keen edge on each blade, working through multiple grit stages to get them performing like new.',
-      color: 'bg-amber-50 border-amber-200',
-      badge: 'bg-amber-100 text-amber-700',
-      icon: '⚡',
+      description: 'Your knives are overdue. A full sharpening session across multiple grits will get them performing like new.',
     };
   }
   return {
     type: 'Tune-Up',
-    description: 'Your knives are in decent shape and just need a precision tune-up. Our Tune-Up service refines the existing edge, polishes the bevel, and hones each blade to a razor-sharp finish.',
-    color: 'bg-green-50 border-green-200',
-    badge: 'bg-green-100 text-green-700',
-    icon: '✨',
+    description: 'Your knives are in decent shape. A precision tune-up will refine the existing edge and bring them back to peak performance.',
   };
 }
 
@@ -71,10 +62,6 @@ export default function KnifeEstimator() {
   const [showResult, setShowResult] = useState(false);
 
   const currentQ = questions[step];
-
-  const handleSelect = (value) => {
-    setSelected(value);
-  };
 
   const handleNext = () => {
     if (!selected) return;
@@ -98,88 +85,79 @@ export default function KnifeEstimator() {
   const result = showResult ? getResult(answers) : null;
 
   return (
-    <section className="bg-[#f5f5f0] py-20 px-4">
+    <section className="bg-[#0f0f0f] py-24 px-4">
       <div className="max-w-2xl mx-auto">
-        <div className="text-center mb-12">
-          <p className="text-[#4a7fa5] font-semibold text-sm uppercase tracking-widest mb-3">Quick Assessment</p>
-          <h2 className="text-3xl sm:text-4xl font-black text-[#1a1a1a] mb-4">How Dull Are Your Knives?</h2>
-          <p className="text-gray-500 text-lg">
-            Answer 3 quick questions and we'll recommend the right service for your blades.
-          </p>
+        <div className="mb-12">
+          <p className="text-[#4a7fa5] font-bold text-xs uppercase tracking-widest mb-4">Quick Assessment</p>
+          <h2 className="text-4xl sm:text-5xl font-black text-white leading-tight">
+            How dull are<br />your knives?
+          </h2>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div className="border border-white/10 bg-[#1a1a1a]">
           {!showResult ? (
             <div className="p-6 sm:p-8">
               {/* Progress */}
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex gap-1.5 mb-8">
                 {questions.map((_, i) => (
                   <div
                     key={i}
-                    className={`h-1.5 flex-1 rounded-full transition-all duration-300 ${
-                      i <= step ? 'bg-[#4a7fa5]' : 'bg-gray-200'
-                    }`}
+                    className={`h-px flex-1 transition-all duration-300 ${i <= step ? 'bg-[#4a7fa5]' : 'bg-white/10'}`}
                   />
                 ))}
               </div>
-              <p className="text-xs font-semibold text-[#4a7fa5] uppercase tracking-widest mb-3">
-                Question {step + 1} of {questions.length}
+
+              <p className="text-[#4a7fa5] text-xs font-bold uppercase tracking-widest mb-3">
+                {step + 1} / {questions.length}
               </p>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#1a1a1a] mb-6">
-                {currentQ.question}
-              </h3>
-              <div className="flex flex-col gap-3 mb-8">
+              <h3 className="text-xl font-black text-white mb-6">{currentQ.question}</h3>
+
+              <div className="flex flex-col gap-2 mb-8">
                 {currentQ.options.map((opt) => (
                   <button
                     key={opt.value}
-                    onClick={() => handleSelect(opt.value)}
-                    className={`w-full text-left px-5 py-4 rounded-xl border-2 font-medium text-sm transition-all duration-150 cursor-pointer ${
+                    onClick={() => setSelected(opt.value)}
+                    className={`w-full text-left px-5 py-4 border text-sm font-medium transition-all duration-150 cursor-pointer ${
                       selected === opt.value
-                        ? 'border-[#4a7fa5] bg-[#4a7fa5]/5 text-[#1a1a1a]'
-                        : 'border-gray-200 bg-white text-gray-700 hover:border-[#4a7fa5]/40 hover:bg-[#4a7fa5]/5'
+                        ? 'border-[#4a7fa5] bg-[#4a7fa5]/10 text-white'
+                        : 'border-white/10 text-white/50 hover:border-white/30 hover:text-white'
                     }`}
                   >
-                    <span className={`inline-block w-4 h-4 rounded-full border-2 mr-3 align-middle transition-colors ${
-                      selected === opt.value ? 'border-[#4a7fa5] bg-[#4a7fa5]' : 'border-gray-300 bg-white'
+                    <span className={`inline-block w-3 h-3 border mr-3 align-middle transition-colors ${
+                      selected === opt.value ? 'border-[#4a7fa5] bg-[#4a7fa5]' : 'border-white/20'
                     }`} />
                     {opt.label}
                   </button>
                 ))}
               </div>
+
               <button
                 onClick={handleNext}
                 disabled={!selected}
-                className={`w-full py-4 rounded-xl font-bold text-base transition-all duration-200 ${
+                className={`w-full py-4 text-xs font-black uppercase tracking-widest transition-colors ${
                   selected
-                    ? 'bg-[#4a7fa5] hover:bg-[#3d6e91] text-white cursor-pointer shadow-md hover:shadow-lg'
-                    : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                    ? 'bg-white text-[#0f0f0f] hover:bg-[#4a7fa5] hover:text-white cursor-pointer'
+                    : 'bg-white/5 text-white/20 cursor-not-allowed'
                 }`}
               >
-                {step < questions.length - 1 ? 'Next Question →' : 'See My Result →'}
+                {step < questions.length - 1 ? 'Next →' : 'See Result →'}
               </button>
             </div>
           ) : (
             <div className="p-6 sm:p-8">
-              <div className={`rounded-xl border-2 p-6 mb-6 ${result.color}`}>
-                <div className="flex items-start gap-4">
-                  <span className="text-4xl">{result.icon}</span>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-1">We recommend</p>
-                    <h3 className="text-2xl font-black text-[#1a1a1a] mb-3">{result.type}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{result.description}</p>
-                  </div>
-                </div>
-              </div>
+              <p className="text-[#4a7fa5] text-xs font-bold uppercase tracking-widest mb-2">We recommend</p>
+              <h3 className="text-3xl font-black text-white mb-4">{result.type}</h3>
+              <p className="text-white/50 text-sm leading-relaxed mb-8 pb-8 border-b border-white/10">{result.description}</p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
                   onClick={() => setService(`Service recommendation: ${result.type}`)}
-                  className="flex-1 bg-[#4a7fa5] hover:bg-[#3d6e91] text-white font-bold py-4 rounded-xl transition-colors text-base"
+                  className="flex-1 bg-white hover:bg-[#4a7fa5] text-[#0f0f0f] hover:text-white font-black py-4 text-xs uppercase tracking-widest transition-colors"
                 >
                   Book a {result.type} →
                 </button>
                 <button
                   onClick={handleReset}
-                  className="sm:w-auto px-6 py-4 border-2 border-gray-200 hover:border-gray-300 text-gray-600 font-semibold rounded-xl transition-colors text-sm"
+                  className="sm:w-auto px-6 py-4 border border-white/10 hover:border-white/30 text-white/40 hover:text-white font-bold text-xs uppercase tracking-widest transition-colors"
                 >
                   Start Over
                 </button>
