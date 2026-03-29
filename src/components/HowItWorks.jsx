@@ -21,23 +21,28 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="bg-[#f5f5f0] py-24 px-4">
-      <div className="max-w-5xl mx-auto">
-        <div className="mb-12">
+    <section id="how-it-works" className="bg-[#f5f5f0] overflow-hidden">
+      {/* Full-width photo banner */}
+      <div className="relative w-full h-72 sm:h-96">
+        <img
+          src="https://images.unsplash.com/photo-1585515320310-259814833e62?auto=format&fit=crop&w=1920&q=80"
+          alt="Knife being sharpened on a whetstone"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-[#f5f5f0]" />
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center px-4">
+          <p className="text-white/80 text-xs font-bold uppercase tracking-widest">
+            Professional sharpening — every order
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-5xl mx-auto px-4 pb-24">
+        <div className="mb-16 pt-8">
           <p className="text-[#4a7fa5] font-bold text-xs uppercase tracking-widest mb-4">The Process</p>
           <h2 className="text-4xl sm:text-5xl font-black text-[#0f0f0f] leading-tight max-w-sm">
             Three steps.<br />That's it.
           </h2>
-        </div>
-
-        {/* Visual image */}
-        <div className="relative w-full h-48 sm:h-64 mb-16 overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1591189863430-ab87e120f312?auto=format&fit=crop&w=1400&q=80"
-            alt="Professional knife sharpening"
-            className="w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#f5f5f0]/60 to-transparent" />
         </div>
 
         <div className="relative">
@@ -66,7 +71,7 @@ export default function HowItWorks() {
           </p>
           <button
             onClick={() => document.getElementById('order')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-[#0f0f0f] hover:bg-[#1a1a1a] text-white text-xs font-black px-8 py-4 uppercase tracking-widest transition-colors whitespace-nowrap"
+            className="bg-[#0f0f0f] hover:bg-[#4a7fa5] text-white text-xs font-black px-8 py-4 uppercase tracking-widest transition-colors whitespace-nowrap"
           >
             Get Started →
           </button>
