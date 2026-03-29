@@ -27,7 +27,7 @@ export default function Hero() {
       {/* Background image — chef knife on dark surface */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1920&q=80')" }}
+        style={{ backgroundImage: "url('https://images.pexels.com/photos/8477059/pexels-photo-8477059.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')" }}
       />
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-[#0f0f0f]/75" />

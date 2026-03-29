@@ -35,8 +35,8 @@ export default function B2BSection() {
       {/* Full-width commercial kitchen banner */}
       <div className="relative w-full h-56 sm:h-72 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80"
-          alt="Professional commercial kitchen"
+          src="https://images.pexels.com/photos/2544829/pexels-photo-2544829.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop"
+          alt="Professional chef in commercial kitchen"
           className="w-full h-full object-cover object-bottom"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-[#f5f5f0]" />

@@ -25,8 +25,8 @@ export default function HowItWorks() {
       {/* Full-width photo banner */}
       <div className="relative w-full h-72 sm:h-96">
         <img
-          src="https://images.unsplash.com/photo-1585515320310-259814833e62?auto=format&fit=crop&w=1920&q=80"
-          alt="Knife being sharpened on a whetstone"
+          src="https://images.pexels.com/photos/5973838/pexels-photo-5973838.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop"
+          alt="Knife being sharpened on an electric bench grinder"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-[#f5f5f0]" />

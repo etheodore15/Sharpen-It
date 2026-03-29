@@ -49,8 +49,8 @@ export default function GiftCards() {
             {/* Gift image */}
             <div className="w-full h-48 overflow-hidden mb-8">
               <img
-                src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80"
-                alt="Gift wrapping"
+                src="https://images.pexels.com/photos/3927238/pexels-photo-3927238.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop"
+                alt="Hands tying a black ribbon on a kraft paper gift box"
                 className="w-full h-full object-cover object-center"
               />
             </div>
