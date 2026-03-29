@@ -7,8 +7,8 @@ const products = [
     price: 55,
     description: 'Blade oil, honing steel, and edge guards. Everything you need to maintain your edge between services.',
     badge: 'Best Seller',
-    // Chef knife accessories on dark surface
-    image: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&h=400&q=80',
+    // Kitchen knives with edge guards on dark surface
+    image: 'https://images.pexels.com/photos/3827668/pexels-photo-3827668.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
   },
   {
     id: 'Honing Steel',
@@ -16,8 +16,8 @@ const products = [
     price: 40,
     description: 'Professional ceramic honing rod. Realigns the edge between sharpenings — use it every time you cook.',
     badge: null,
-    // Knife being honed/maintained
-    image: 'https://images.unsplash.com/photo-1585515320310-259814833e62?auto=format&fit=crop&w=600&h=400&q=80',
+    // Chef in apron sharpening a cleaver on honing steel
+    image: 'https://images.pexels.com/photos/8477059/pexels-photo-8477059.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
   },
   {
     id: 'Blade Oil',
@@ -25,8 +25,8 @@ const products = [
     price: 20,
     description: 'Food-safe camellia oil, 50ml. Prevents rust on carbon steel. A few drops after washing is all it takes.',
     badge: null,
-    // Close-up of knife blade care
-    image: 'https://images.unsplash.com/photo-1569485849571-63e7e2dfa3fb?auto=format&fit=crop&w=600&h=400&q=80',
+    // Close-up of Damascus steel chef knife — blade care/maintenance
+    image: 'https://images.pexels.com/photos/16457318/pexels-photo-16457318.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
   },
   {
     id: 'Edge Guards',
@@ -34,8 +34,8 @@ const products = [
     price: 18,
     description: 'Set of 4 universal blade guards. Protect your edge during storage and transport.',
     badge: null,
-    // Knife on wooden surface / storage
-    image: 'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=600&h=400&q=80',
+    // Moody B&W close-up of knife handles in a knife block — edge guard storage
+    image: 'https://images.pexels.com/photos/19289615/pexels-photo-19289615.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
   },
 ];
 

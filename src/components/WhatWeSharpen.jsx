@@ -15,8 +15,8 @@ export default function WhatWeSharpen() {
       {/* Hero image banner */}
       <div className="relative w-full h-56 sm:h-72 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80"
-          alt="Collection of professional kitchen knives"
+          src="https://images.pexels.com/photos/16603814/pexels-photo-16603814.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop"
+          alt="Collection of professional kitchen knives on dark background"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-[#0f0f0f]/50" />

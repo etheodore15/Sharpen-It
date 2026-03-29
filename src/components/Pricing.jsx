@@ -33,8 +33,8 @@ export default function Pricing() {
       {/* Photo divider */}
       <div className="relative w-full h-48 sm:h-64 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1920&q=80"
-          alt="Professional kitchen knife set"
+          src="https://images.pexels.com/photos/20392658/pexels-photo-20392658.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop"
+          alt="Close-up of sharp knife blade edge"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#f5f5f0] via-black/60 to-[#0f0f0f]" />
