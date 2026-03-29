@@ -1,19 +1,18 @@
-export default function StatsBar() {
-  const stats = [
-    { icon: '🔪', number: '47', label: 'knives sharpened this month' },
-    { icon: '⭐', number: '100%', label: 'satisfaction on pre-launch orders' },
-    { icon: '📦', number: 'AU-Wide', label: 'including regional & rural' },
-  ];
+const stats = [
+  { number: '47', label: 'Knives sharpened this month' },
+  { number: '100%', label: 'Satisfaction — pre-launch orders' },
+  { number: 'AU-Wide', label: 'Including regional & rural' },
+];
 
+export default function StatsBar() {
   return (
-    <section className="bg-[#1a1a1a] py-16 px-4">
+    <section className="bg-[#0a0a0a] py-16 px-4 border-y border-white/5">
       <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4 text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/5">
           {stats.map((stat, i) => (
-            <div key={i} className="flex flex-col items-center gap-2">
-              <span className="text-4xl mb-1">{stat.icon}</span>
-              <span className="text-4xl sm:text-5xl font-black text-white leading-none">{stat.number}</span>
-              <span className="text-gray-400 text-sm sm:text-base font-medium">{stat.label}</span>
+            <div key={i} className="flex flex-col items-center text-center py-8 sm:py-0 px-8">
+              <span className="text-5xl sm:text-6xl font-black text-white leading-none mb-3">{stat.number}</span>
+              <span className="text-xs text-white/30 uppercase tracking-widest font-semibold">{stat.label}</span>
             </div>
           ))}
         </div>

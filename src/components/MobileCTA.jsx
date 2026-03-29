@@ -4,12 +4,12 @@ export default function MobileCTA() {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-gray-200 px-4 py-3 shadow-2xl">
+    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden border-t border-white/10 bg-[#0f0f0f] px-4 py-3">
       <button
         onClick={scrollToOrder}
-        className="w-full bg-[#4a7fa5] hover:bg-[#3d6e91] text-white font-bold text-base py-4 rounded-xl transition-colors shadow-lg"
+        className="w-full bg-white hover:bg-[#4a7fa5] text-[#0f0f0f] hover:text-white font-black text-xs py-4 uppercase tracking-widest transition-colors"
       >
-        🔪 Send My Knives — from $58 →
+        Send My Knives — from $58 →
       </button>
     </div>
   );
